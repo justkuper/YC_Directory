@@ -1,5 +1,6 @@
 import { clsx, type ClassValue } from "clsx"; // Utility for conditional classNames
-import { twMerge } from "tailwind-merge"; // Merges Tailwind CSS classes intelligently
+import { twMerge } from "tailwind-merge";
+import { T } from "hotscript"; // Merges Tailwind CSS classes intelligently
 
 /**
  * Utility function to combine class names with Tailwind CSS merging.
@@ -21,4 +22,8 @@ export function formatDate(date: string) {
     day: "numeric",
     year: "numeric",
   });
+}
+
+export function parseServerActionResponse<T>(response: T) {
+  return JSON.parse(JSON.stringify(response));
 }
