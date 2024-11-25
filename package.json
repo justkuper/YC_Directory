@@ -10,7 +10,7 @@
     "predev": "npm run typegen",
     "prebuild": "npm run typegen",
     "typegen": "sanity schema extract --path=./sanity/extract",
-    "install": "npm install"
+    "install": ""
   },
   "packageManager": "npm@10.5.2",
   "overrides": {
