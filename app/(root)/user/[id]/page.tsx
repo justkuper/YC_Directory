@@ -38,11 +38,11 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
           </p>
           <p className="mt-1 text-center text-14-normal">{user?.bio}</p>
         </div>
-        <div className="flex-1 flex-col gap-5 lg:-mt-5">
+        <div className="flex-1 flex flex-col gap-5 lg:-mt-5">
           <p className="text-30-bold">
             {session?.id === id ? "Your" : "All"} Startups
           </p>
-          <ul className="card_grid_sm">
+          <ul className="card_grid-sm">
             <Suspense fallback={<StartupCardSkeleton />}>
               <UserStartups id={id} />
             </Suspense>
