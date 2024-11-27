@@ -22,6 +22,8 @@ export const createPitch = async (
     Array.from(form).filter(([key]) => key !== "pitch"),
   );
 
+  console.log(title, description, category, link);
+
   const slug = slugify(title as string, { lower: true, strict: true });
 
   try {
