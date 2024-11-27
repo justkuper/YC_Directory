@@ -22,7 +22,10 @@ export const createPitch = async (
     Array.from(form).filter(([key]) => key !== "pitch"),
   );
 
-  console.log(title, description, category, link);
+  console.log("Title: ", title);
+  console.log("Description: ", description);
+  console.log("Category: ", category);
+  console.log("Link: ", link);
 
   const slug = slugify(title as string, { lower: true, strict: true });
 
