@@ -7,7 +7,9 @@ export const startup = defineType({
   fields: [
     defineField({
       name: "title",
-      type: "string",
+      title: "Title",
+      type: "string", // Text input field for the startup title
+      validation: (Rule) => Rule.required().min(5).max(100), // Validation: Required, min/max length
     }),
     defineField({
       name: "slug",
